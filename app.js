@@ -65,6 +65,7 @@ $(document).ready(function() {
                 color: '#ADD8E6',
                 value: Math.max(1, resultScore / 100), // Adjust node size based on result score
                 details: {
+                    score: resultScore,
                     type: type,
                     url: detailedDescription.url || 'N/A',
                     articleBody: detailedDescription.articleBody || 'No description available'
@@ -153,6 +154,7 @@ $(document).ready(function() {
             const content = `
                 <h3 class="title is-5">${node.label}</h3>
                 <p><strong>Type:</strong> ${details.type}</p>
+                <p><strong>Score:</strong> ${details.score}</p>
                 <p><strong>URL:</strong> <a href="${details.url}" target="_blank">${details.url}</a></p>
                 <p><strong>Description:</strong> ${details.articleBody}</p>
             `;
