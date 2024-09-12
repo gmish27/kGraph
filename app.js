@@ -58,7 +58,7 @@ $(document).ready(function() {
             const name = item.result.name || 'Unknown';
             const type = item.result['@type'] ? item.result['@type'][0] : 'Unknown';
             const detailedDescription = item.result.detailedDescription || {};
-            
+
             nodes.add({
                 id: index + 1,
                 label: name,
@@ -111,12 +111,12 @@ $(document).ready(function() {
                 }
             },
             physics: {
-                stabilization: true,
+                stabilization: false,
                 barnesHut: {
-                    gravitationalConstant: -80000,
+                    gravitationalConstant: 0,
                     centralGravity: 0.3,
                     springLength: 95,
-                    springConstant: 0.04,
+                    springConstant: 0.01,
                     damping: 0.09,
                     avoidOverlap: 0.1
                 }
