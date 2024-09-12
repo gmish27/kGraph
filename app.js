@@ -113,7 +113,7 @@ $(document).ready(function() {
             physics: {
                 stabilization: false,
                 barnesHut: {
-                    gravitationalConstant: 0,
+                    gravitationalConstant: -80000,
                     centralGravity: 0.3,
                     springLength: 95,
                     springConstant: 0.01,
