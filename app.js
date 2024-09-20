@@ -3,7 +3,7 @@ $(document).ready(function() {
     let network;
 
     // Check for stored API key
-    let apiKey = sessionStorage.getItem('apiKey');
+    let apiKey = localStorage.getItem('apiKey');
     if (apiKey) {
         $('#apiKeyField').hide();
     }
@@ -12,7 +12,7 @@ $(document).ready(function() {
         if (!apiKey) {
             apiKey = $('#apiKey').val().trim();
             if (apiKey) {
-                sessionStorage.setItem('apiKey', apiKey);
+                localStorage.setItem('apiKey', apiKey);
                 $('#apiKeyField').hide();
             }
         }
